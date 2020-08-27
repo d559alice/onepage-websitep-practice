@@ -1,3 +1,11 @@
+    $('.main').fadeOut(1000);
+    $(document).ready(function(){
+      $('#loading').fadeOut(1000);
+      setTimeout(()=>{
+        $('.main').fadeIn(1000);
+      },1000)
+  });
+
 // section02
 var $grid = $('.grid').isotope({
   itemSelector: '.grid-item',
@@ -72,7 +80,7 @@ $('#go_top_page').css({ display: 'none' });
     $("#go_top_page").click(function(){
       $("html,body").animate({
           scrollTop:0
-      },1500);
+      },1500,'easeInOutQuint');
   });
     
 
